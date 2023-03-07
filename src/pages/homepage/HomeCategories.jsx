@@ -14,19 +14,29 @@ function HomeCategories() {
             <div className="collage">
                 <div className="collage-item">
                     <img src={filter_1} alt="filterimg" className="collage-item-img" />
-                    <button className='collage-item__btn'>MEN</button>
+                    <div className="collage-btn">
+                        <button className='collage-item__btn'>MEN</button>
+                    </div>
                 </div>
                 <div className="collage-item">
                     <img src={filter_2} alt="filterimg" className="collage-item-img" />
-                    <button className="collage-item__btn">WOMEN</button>
+                    <div className="collage-btn">
+                        <button className="collage-item__btn">WOMEN</button>
+                    </div>
                 </div>
-                <div className="collage-item">
-                    <img src={filter_3} alt="filterimg" className="collage-item-img" />
-                    <button className="collage-item__btn">ACCESSORIES</button>
-                </div>
-                <div className="collage-item">
-                    <img src={filter_4} alt="filterimg" className="collage-item-img" />
-                    <button className="collage-item__btn">KIDS</button>
+                <div className="collage-container">
+                    <div className="collage-item">
+                        <img src={filter_3} alt="filterimg" className="collage-item-img" />
+                        <div className="collage-btn">
+                            <button className="collage-item__btn">ACCESSORIES</button>
+                        </div>
+                    </div>
+                    <div className="collage-item">
+                        <img src={filter_4} alt="filterimg" className="collage-item-img" />
+                        <div className="collage-btn">
+                            <button className="collage-item__btn">KIDS</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
