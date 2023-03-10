@@ -3,6 +3,7 @@ import HomeCategories from "./HomeCategories"
 import HomeMainComp from "./HomeMainComp"
 import NavBar from "./NavBar"
 import Summer from "./Summer"
+import WinterClothes from "./WinterClothes"
 
 export const Homepage = () => {
     return(
@@ -12,6 +13,7 @@ export const Homepage = () => {
             <HomeCategories />
             <Bestseller />
             <Summer />
+            <WinterClothes />
         </main>
     )
 }
