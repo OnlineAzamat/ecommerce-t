@@ -1,9 +1,17 @@
+import { useRef } from "react"
+import { useState } from "react"
 
 export default function NavBar() {
+    const [mobNav, setMobNav] = useState(false)
+
+    function MobileNav() {
+        setMobNav(current => !current)
+    }
+
     return(
         <main className="main-nav">
             <header className="top-nav">
-                <div className="inner-top-nov d-flex justify-content-between w-100 align-items-center">
+                <div className="inner-top-nav d-flex justify-content-between w-100 align-items-center">
                     <div className="contact d-flex">
                         <div className="phone">
                             <i className="bi bi-telephone"></i>
@@ -87,7 +95,7 @@ export default function NavBar() {
                         </span>
                     </form>
                 </div>
-                <div className="d-flex align-items-center">
+                <div className="align-items-center register-container">
                     <div className="register d-flex align-items-center">
                             <a href="/signin">
                                 <i className="bi bi-person"></i>
@@ -108,6 +116,27 @@ export default function NavBar() {
                             <span>1</span>
                         </a>
                     </div>
+                </div>
+                <div className="mobile-nav-btn">
+                    <button className="mobile-nav-btn__btn" onClick={MobileNav}>
+                        <i className="bi bi-list"></i>
+                    </button>
+                </div>
+                <div className={mobNav ? "mobile-nav-links active" : "mobile-nav-links"}>
+                    <ul className="lists">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/">Product</a>
+                        </li>
+                        <li>
+                            <a href="/">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="/">Contact</a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </main>
